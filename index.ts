@@ -28,7 +28,7 @@ function calculateAge(birthdate): number {
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDifference = today.getMonth() - birthDate.getMonth();
     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
+        age--;   //verifies if the month of birth has passed yet, then check if the day of their birthday has passed if we are their birthday month, if that's the case their age is decreased by one because they didnt have their birthday yet
     }
     return age;
 }
